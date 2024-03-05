@@ -1,0 +1,4 @@
+*** Linking
+#+begin_src sh
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -o "./build/iPhoneSimulator-16.4-Development/motion-cross-platform.app/motion-cross-platform"  -filelist "/var/folders/93/t9j69wxn2kjcpz887b_dm06w0000gn/T/linker-objs-list20240301-55096-tubhup" -arch x86_64 -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk" -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk/System/Library/Frameworks -mios-simulator-version-min=16.4 -Wl,-no_pie -L"/Library/RubyMotion/data/ios/16.4/iPhoneSimulator" -lrubymotion-static -lobjc -licucore -stdlib=libc++  -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreFoundation -framework CFNetwork -framework CoreAudio -framework QuartzCore -framework CoreServices
+#+end_src

@@ -1,0 +1,11 @@
+*** Object Files to Link.
+#+begin_src 
+  ./build/iPhoneSimulator-16.4-Development/objs/init.o
+  ./build/iPhoneSimulator-16.4-Development/objs/main.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/UIKit_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/Foundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/CoreGraphics_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/CoreFoundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/CFNetwork_stubs.o
+  ./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.o
+#+end_src

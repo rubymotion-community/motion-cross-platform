@@ -1,0 +1,259 @@
+* Build initiated.
+  :PROPERTIES:
+  :platform: iPhoneSimulator
+  :time: 23:41:02.378
+  :ruby_compiler: /Library/RubyMotion/bin/ruby
+  :c_compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+  :cxx_compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  :archs: ["x86_64"]
+  :END:
+** Resource Directories
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/resources
+** BridgeSupport Files
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/RubyMotion.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/UIKit.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/Foundation.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreGraphics.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreFoundation.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CFNetwork.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreAudio.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/QuartzCore.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreServices.bridgesupport
+** Compiling =./app/app_delegate.rb=
+*** IR Generation
+#+begin_src sh
+  /usr/bin/env OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES RM_DATADIR_PATH="/Library/RubyMotion/data/ios/16.4" VM_PLATFORM="iPhoneSimulator" VM_KERNEL_PATH="/Library/RubyMotion/data/ios/16.4/iPhoneSimulator/kernel-x86_64.bc" VM_OPT_LEVEL="0" /usr/bin/arch -arch x86_64 "/Library/RubyMotion/bin/ruby" --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/RubyMotion.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/UIKit.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/Foundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreGraphics.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreFoundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CFNetwork.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreAudio.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/QuartzCore.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreServices.bridgesupport"  --project_dir "/Users/andrew/Projects/rubymotion/motion-cross-platform" --emit-llvm-fast ""
+  ./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.s
+  MREP_FE95697AA21F45AF80BE394A02E55D93
+  /Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb
+#+end_src
+*** Bitcode Generation
+#+begin_src sh
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -mios-simulator-version-min=16.4 -fexceptions -c -arch x86_64 "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.s" -o "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.o"
+#+end_src
+*** Compilation Result: Succeeded
+    :PROPERTIES:
+    :result: :success
+    :start_time: 23:41:02.741
+    :end_time: 23:41:03.984
+    :duration: 1.243799
+    :END:
+*** Fat Binary Generation.
+#+begin_src sh
+  /usr/bin/lipo -create "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.o" -output "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.o"
+#+end_src
+** Generating =init.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_FE95697AA21F45AF80BE394A02E55D93(void *, void *);
+  int rm_repl_port = 51219;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"9.2");
+  MREP_FE95697AA21F45AF80BE394A02E55D93(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src
+** Compiling =init.mm=
+#+begin_src sh
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneSimulator-16.4-Development/objs/init.mm" -arch x86_64 -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk" -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk/System/Library/Frameworks -mios-simulator-version-min=16.4 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneSimulator-16.4-Development/objs/init.o"
+#+end_src
+** Generating =main.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_FE95697AA21F45AF80BE394A02E55D93(void *, void *);
+  int rm_repl_port = 51219;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"9.2");
+  MREP_FE95697AA21F45AF80BE394A02E55D93(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src
+** Compiling =main.mm=
+#+begin_src sh
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ "./build/iPhoneSimulator-16.4-Development/objs/main.mm" -arch x86_64 -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk" -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk/System/Library/Frameworks -mios-simulator-version-min=16.4 -O0 -fexceptions -fblocks -fmodules -g -fobjc-legacy-dispatch -fobjc-abi-version=2 -c -o "./build/iPhoneSimulator-16.4-Development/objs/main.o"
+#+end_src
+** Creating app.
+*** Object Files to Link.
+#+begin_src 
+  ./build/iPhoneSimulator-16.4-Development/objs/init.o
+  ./build/iPhoneSimulator-16.4-Development/objs/main.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/UIKit_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/Foundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/CoreGraphics_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/CoreFoundation_stubs.o
+  /Library/RubyMotion/data/ios/16.4/iPhoneSimulator/CFNetwork_stubs.o
+  ./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.o
+#+end_src
+*** Linking
+#+begin_src sh
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -o "./build/iPhoneSimulator-16.4-Development/motion-cross-platform.app/motion-cross-platform"  -filelist "/var/folders/93/t9j69wxn2kjcpz887b_dm06w0000gn/T/linker-objs-list20240301-55096-tubhup" -arch x86_64 -isysroot "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk" -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator16.4.sdk/System/Library/Frameworks -mios-simulator-version-min=16.4 -Wl,-no_pie -L"/Library/RubyMotion/data/ios/16.4/iPhoneSimulator" -lrubymotion-static -lobjc -licucore -stdlib=libc++  -framework UIKit -framework Foundation -framework CoreGraphics -framework CoreFoundation -framework CFNetwork -framework CoreAudio -framework QuartzCore -framework CoreServices
+#+end_src
+* Compiling Asset Bundles
+* Writing Info.plist =./build/iPhoneSimulator-16.4-Development/motion-cross-platform.app/Info.plist=
+#+begin_src xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+  <key>BuildMachineOSBuild</key>
+  <string>22E772610a</string>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>en</string>
+  <key>CFBundleName</key>
+  <string>motion-cross-platform</string>
+  <key>CFBundleDisplayName</key>
+  <string>motion-cross-platform</string>
+  <key>CFBundleIdentifier</key>
+  <string>com.yourcompany.motion-cross-platform</string>
+  <key>CFBundleExecutable</key>
+  <string>motion-cross-platform</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0</string>
+  <key>CFBundleSignature</key>
+  <string>????</string>
+  <key>CFBundleVersion</key>
+  <string>1.0</string>
+  <key>MinimumOSVersion</key>
+  <string>16.4</string>
+  <key>CFBundleSupportedPlatforms</key>
+  <array>
+  <string>iPhoneOS</string>
+  </array>
+  <key>CFBundleIconFiles</key>
+  <array>
+  </array>
+  <key>CFBundleIcons</key>
+  <dict>
+  <key>CFBundlePrimaryIcon</key>
+  <dict>
+  <key>CFBundleIconFiles</key>
+  <array>
+  </array>
+  <key>UIPrerenderedIcon</key>
+  <false/>
+  </dict>
+  </dict>
+  <key>UIAppFonts</key>
+  <array>
+  </array>
+  <key>UIDeviceFamily</key>
+  <array>
+  <integer>1</integer>
+  </array>
+  <key>UISupportedInterfaceOrientations</key>
+  <array>
+  <string>UIInterfaceOrientationPortrait</string>
+  <string>UIInterfaceOrientationLandscapeLeft</string>
+  <string>UIInterfaceOrientationLandscapeRight</string>
+  </array>
+  <key>UIStatusBarStyle</key>
+  <string>UIStatusBarStyleDefault</string>
+  <key>UIBackgroundModes</key>
+  <array>
+  </array>
+  <key>DTXcode</key>
+  <string>0143</string>
+  <key>DTXcodeBuild</key>
+  <string>14E222b</string>
+  <key>DTSDKName</key>
+  <string>iphonesimulator16.4</string>
+  <key>DTSDKBuild</key>
+  <string>20E238</string>
+  <key>DTPlatformName</key>
+  <string>iphonesimulator</string>
+  <key>DTCompiler</key>
+  <string>com.apple.compilers.llvm.clang.1_0</string>
+  <key>DTPlatformVersion</key>
+  <string>16.4</string>
+  <key>DTPlatformBuild</key>
+  <string>20E238</string>
+  <key>UILaunchImages</key>
+  <array>
+  <dict>
+  <key>UILaunchImageMinimumOSVersion</key>
+  <string>7.0</string>
+  <key>UILaunchImageName</key>
+  <string>Default-568h@2x</string>
+  <key>UILaunchImageOrientation</key>
+  <string>Portrait</string>
+  <key>UILaunchImageSize</key>
+  <string>{320, 568}</string>
+  </dict>
+  </array>
+  </dict>
+  </plist>
+#+end_src

@@ -1,0 +1,4 @@
+*** Fat Binary Generation.
+#+begin_src sh
+  /usr/bin/lipo -create "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.o" -output "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.o"
+#+end_src

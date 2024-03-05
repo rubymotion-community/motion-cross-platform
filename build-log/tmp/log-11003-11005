@@ -1,0 +1,7 @@
+*** IR Generation
+#+begin_src sh
+  /usr/bin/env OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES RM_DATADIR_PATH="/Library/RubyMotion/data/ios/16.4" VM_PLATFORM="iPhoneSimulator" VM_KERNEL_PATH="/Library/RubyMotion/data/ios/16.4/iPhoneSimulator/kernel-x86_64.bc" VM_OPT_LEVEL="0" /usr/bin/arch -arch x86_64 "/Library/RubyMotion/bin/ruby" --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/RubyMotion.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/UIKit.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/Foundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreGraphics.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreFoundation.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CFNetwork.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreAudio.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/QuartzCore.bridgesupport"  --uses-bs "/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreServices.bridgesupport"  --project_dir "/Users/andrew/Projects/rubymotion/motion-cross-platform" --emit-llvm-fast ""
+  ./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.s
+  MREP_FE95697AA21F45AF80BE394A02E55D93
+  /Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb
+#+end_src

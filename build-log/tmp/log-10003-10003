@@ -1,0 +1,10 @@
+** BridgeSupport Files
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/RubyMotion.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/UIKit.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/Foundation.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreGraphics.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreFoundation.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CFNetwork.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreAudio.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/QuartzCore.bridgesupport
+- /Users/andrew/Projects/rubymotion/motion-cross-platform/Library/RubyMotion/data/ios/16.4/BridgeSupport/CoreServices.bridgesupport

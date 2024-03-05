@@ -1,0 +1,46 @@
+** Generating =init.mm=
+#+begin_src objective-c
+  #import <Foundation/Foundation.h>
+  
+  extern "C" {
+  void ruby_init(void);
+  void ruby_init_loadpath(void);
+  void ruby_script(const char *);
+  void *rb_vm_top_self(void);
+  void rb_define_global_const(const char *, void *);
+  void rb_rb2oc_exc_handler(void);
+  void ruby_init_device_repl(void);
+  void MREP_FE95697AA21F45AF80BE394A02E55D93(void *, void *);
+  int rm_repl_port = 51219;
+  }
+  
+  extern "C"
+  void
+  RubyMotionInit(int argc, char **argv)
+  {
+  static bool initialized = false;
+  if (!initialized) {
+  ruby_init();
+  ruby_init_loadpath();
+  if (argc > 0) {
+  const char *progname = argv[0];
+  ruby_script(progname);
+  }
+  #if !__LP64__
+  try {
+  #endif
+  void *self = rb_vm_top_self();
+  ruby_init_device_repl();
+  rb_define_global_const("RUBYMOTION_ENV", @"development");
+  rb_define_global_const("RUBYMOTION_VERSION", @"9.2");
+  MREP_FE95697AA21F45AF80BE394A02E55D93(self, 0);
+  #if !__LP64__
+  }
+  catch (...) {
+  rb_rb2oc_exc_handler();
+  }
+  #endif
+  initialized = true;
+  }
+  }
+#+end_src

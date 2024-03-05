@@ -1,0 +1,4 @@
+*** Bitcode Generation
+#+begin_src sh
+  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang  -mios-simulator-version-min=16.4 -fexceptions -c -arch x86_64 "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.s" -o "./build/iPhoneSimulator-16.4-Development/objs/Users/andrew/Projects/rubymotion/motion-cross-platform/app/app_delegate.rb.x86_64.o"
+#+end_src

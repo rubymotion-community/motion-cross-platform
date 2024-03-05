@@ -1,0 +1,9 @@
+* Build initiated.
+  :PROPERTIES:
+  :platform: iPhoneSimulator
+  :time: 23:41:02.378
+  :ruby_compiler: /Library/RubyMotion/bin/ruby
+  :c_compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang
+  :cxx_compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  :archs: ["x86_64"]
+  :END:
