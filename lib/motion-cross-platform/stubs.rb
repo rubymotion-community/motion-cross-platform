@@ -2,13 +2,9 @@ module Motion
   module Project
     class Config
     end
-  end
-end
 
-module Motion
-  module Project
     class App
-      def template
+      def self.template
         :cross_platform
       end
 

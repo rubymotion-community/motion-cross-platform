@@ -7,6 +7,6 @@ rescue LoadError
 end
 
 Motion::Project::App.setup do |app|
-  app.files.delete_if { path.start_with?("./app/android") }
-  app.files.delete_if { path.start_with?("./app/osx") }
+  app.files.delete_if {|path| path.start_with?("./app/android") }
+  app.files.delete_if {|path| path.start_with?("./app/osx") }
 end

@@ -11,7 +11,7 @@ Motion::Project::App.setup do |app|
   app.assets_dirs << "resources"
   app.resources_dirs = []
 
-  app.files.delete_if { path.start_with?("./app/ios") }
-  app.files.delete_if { path.start_with?("./app/osx") }
-  app.files.delete_if { path.start_with?("./app/cocoa") }
+  app.files.delete_if {|path| path.start_with?("./app/ios") }
+  app.files.delete_if {|path| path.start_with?("./app/osx") }
+  app.files.delete_if {|path| path.start_with?("./app/cocoa") }
 end

@@ -6,8 +6,7 @@ module Motion
       # Allows us to define the config in one file but only
       # execute it when it matches the specified platform.
       def platform(platform_name)
-        return unless platform_name.to_sym == template
-        yield
+        yield if platform_name.to_sym == template
       end
     end
   end
