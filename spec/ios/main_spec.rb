@@ -1,4 +1,4 @@
-describe "Application 'motion-cross-platform'" do
+describe "iOS Application 'motion-cross-platform'" do
   before do
     @app = UIApplication.sharedApplication
   end

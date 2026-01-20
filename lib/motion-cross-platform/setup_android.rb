@@ -14,4 +14,7 @@ Motion::Project::App.setup do |app|
   app.files.delete_if {|path| path.start_with?("./app/ios") }
   app.files.delete_if {|path| path.start_with?("./app/osx") }
   app.files.delete_if {|path| path.start_with?("./app/cocoa") }
+
+  app.spec_files.delete_if {|path| path.start_with?("./spec/ios") }
+  app.spec_files.delete_if {|path| path.start_with?("./spec/osx") }
 end
