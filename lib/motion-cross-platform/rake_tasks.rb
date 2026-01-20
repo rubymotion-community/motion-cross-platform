@@ -97,13 +97,41 @@ else
       android_cmd << "skip_build=1"
     end
 
-    ios_io = IO.popen(ios_cmd.join(" "), "w")
-    android_io = IO.popen(android_cmd.join(" "), "w")
+    ios_io = nil
+    android_io = nil
 
-    while expr = Readline.readline("> ", true)
-      ios_io.puts expr
-      android_io.puts expr
-      sleep 0.2
+    begin
+      puts "Starting iOS simulator..."
+      ios_io = IO.popen(ios_cmd.join(" "), "w")
+
+      puts "Starting Android emulator..."
+      android_io = IO.popen(android_cmd.join(" "), "w")
+
+      puts "Super REPL ready. Type expressions to evaluate on both platforms."
+      puts "Press Ctrl-D or type 'exit' to quit.\n\n"
+
+      while expr = Readline.readline("> ", true)
+        break if expr.strip.downcase == "exit"
+
+        ios_io.puts expr unless ios_io.closed?
+        android_io.puts expr unless android_io.closed?
+        sleep 0.2
+      end
+    rescue Interrupt
+      puts "\nInterrupted."
+    rescue Errno::EPIPE => e
+      puts "\nError: Lost connection to a simulator process."
+      puts "One of the processes may have crashed: #{e.message}"
+    ensure
+      puts "\nShutting down..."
+      [ios_io, android_io].compact.each do |io|
+        begin
+          io.close unless io.closed?
+        rescue IOError
+          # Already closed, ignore
+        end
+      end
+      puts "Super REPL closed."
     end
   end
 end
